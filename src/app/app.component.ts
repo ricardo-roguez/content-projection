@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'content-projection';
+  onNewValue(val: any) {
+    console.log(val);
+  }
 }

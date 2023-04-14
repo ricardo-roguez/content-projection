@@ -1,0 +1,6 @@
+<i class="fa" [ngClass]="classes"></i>
+<input (focus)="inputFocus = true" (blur)="inputFocus = false"
+       (keyup)="value.emit(input.value)" #input
+       [placeholder]="placeholder"
+       [type]="type"
+       [autocomplete]="autocomplete">
