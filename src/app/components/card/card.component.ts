@@ -1,4 +1,9 @@
-import { Component } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+
+export interface CardLink {
+  text: string;
+  link: string;
+}
 
 @Component({
   selector: 'app-card',
@@ -8,6 +13,7 @@ import { Component } from '@angular/core';
 })
 export class CardComponent {
 
-  constructor() { }
-
+  @Input() cardTitle: string;
+  @Input() cardBody: string;
+  @Input() cardLink: CardLink;
 }
