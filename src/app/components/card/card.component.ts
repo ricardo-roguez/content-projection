@@ -1,4 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {NgIf} from "@angular/common";
 
 export interface CardLink {
   text: string;
@@ -9,11 +10,14 @@ export interface CardLink {
   selector: 'app-card',
   standalone: true,
   templateUrl: './card.component.html',
+  imports: [
+    NgIf
+  ],
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent {
-
   @Input() cardTitle: string;
   @Input() cardBody: string;
+  @Input() imageSrc: string;
   @Input() cardLink: CardLink;
 }

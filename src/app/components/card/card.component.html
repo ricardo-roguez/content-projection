@@ -1,8 +1,8 @@
-<div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="https://picsum.photos/200/180?random=1" alt="Card image cap">
+<div class="card">
+  <img class="card-img-top" [src]="imageSrc" alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title">{{cardTitle}}</h5>
     <p class="card-text">{{cardBody}}</p>
-    <a [href]="cardLink.link" target="_blank" class="card-link">{{cardLink.text}}</a>
+    <a *ngIf="cardLink" [href]="cardLink.link" target="_blank" class="card-link">{{cardLink.text}}</a>
   </div>
 </div>
