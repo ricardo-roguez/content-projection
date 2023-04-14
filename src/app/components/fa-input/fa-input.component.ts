@@ -11,11 +11,6 @@ import { NgClass } from "@angular/common";
 export class FaInputComponent {
 
   @Input() icon: string;
-  @Output() value = new EventEmitter<string>();
-  @Input() placeholder: string = '';
-  @Input() type: string;
-  @Input() autocomplete: string;
-  inputFocus = false;
 
   get classes() {
     const cssClasses = {
@@ -23,12 +18,6 @@ export class FaInputComponent {
     };
     cssClasses['fa-' + this.icon] = true;
     return cssClasses;
-  }
-
-  @HostBinding('class.focus')
-  get focus() {
-    console.log(this.inputFocus);
-    return this.inputFocus;
   }
 
 }
