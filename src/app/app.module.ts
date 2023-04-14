@@ -12,7 +12,7 @@ import { CardComponent } from './components/card/card.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CardComponent
+    CardComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
