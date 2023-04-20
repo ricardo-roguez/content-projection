@@ -10,9 +10,7 @@ export interface CardLink {
   selector: 'app-card',
   standalone: true,
   templateUrl: './card.component.html',
-  imports: [
-    NgIf
-  ],
+  imports: [NgIf],
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent {
